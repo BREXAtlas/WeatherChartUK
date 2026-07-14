@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "policy": "Reject matching submissions before publication and route uncertain cases to human review.",
+  "blockedDomains": [
+    "bit.ly",
+    "tinyurl.com",
+    "goo.gl",
+    "grabify.link"
+  ],
+  "blockedFileExtensions": [
+    ".exe",
+    ".msi",
+    ".scr",
+    ".bat",
+    ".cmd",
+    ".ps1"
+  ],
+  "blockedAccounts": {
+    "youtube": [],
+    "x": [],
+    "tiktok": [],
+    "mastodon": []
+  },
+  "blockedTermGroups": {
+    "personalData": [
+      "exact home address",
+      "private phone number",
+      "personal email address",
+      "full postcode"
+    ],
+    "unsafeClaims": [
+      "ignore official warning",
+      "warning is fake",
+      "drive through floodwater"
+    ],
+    "solicitation": [
+      "send money now",
+      "guaranteed investment",
+      "crypto giveaway"
+    ],
+    "graphicOrAdult": [
+      "graphic injury",
+      "adult content",
+      "explicit content"
+    ],
+    "profanity": [
+      "fuck",
+      "fucking",
+      "shit",
+      "bullshit"
+    ],
+    "hatefulAbuse": [
+      "racial slur",
+      "homophobic slur",
+      "transphobic slur",
+      "hate speech"
+    ],
+    "minorSafety": [
+      "my child is at",
+      "school pickup location",
+      "minor's home address"
+    ]
+  },
+  "sensitivePatterns": [
+    {
+      "id": "email-address",
+      "pattern": "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b",
+      "action": "reject"
+    },
+    {
+      "id": "uk-phone-like",
+      "pattern": "(?:\\+44|0)\\s?\\d(?:[\\s-]?\\d){8,10}",
+      "action": "review"
+    },
+    {
+      "id": "coordinate-pair",
+      "pattern": "[-+]?\\d{1,2}\\.\\d{4,}\\s*,\\s*[-+]?\\d{1,3}\\.\\d{4,}",
+      "action": "reject"
+    },
+    {
+      "id": "uk-postcode-like",
+      "pattern": "\\b(?:GIR\\s?0AA|[A-Z]{1,2}\\d[A-Z\\d]?\\s*\\d[A-Z]{2})\\b",
+      "action": "review"
+    },
+    {
+      "id": "street-address-like",
+      "pattern": "\\b\\d{1,4}\\s+[A-Z][A-Z .'-]{1,50}\\s(?:STREET|ST|ROAD|RD|AVENUE|AVE|LANE|LN|DRIVE|CLOSE|COURT|WAY)\\b",
+      "action": "review"
+    }
+  ],
+  "locationPolicy": {
+    "minimumGranularity": "town-or-region",
+    "stripCoordinates": true,
+    "stripStreetAddresses": true,
+    "unknownLocationAction": "keep-off-map"
+  }
+}

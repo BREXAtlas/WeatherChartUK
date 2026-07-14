@@ -1,0 +1,131 @@
+.privacy-choice {
+  position: fixed;
+  z-index: 10000;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 1.15rem;
+  color: #f8fbff;
+  background: #102a3c;
+  border: 2px solid #f5a200;
+  border-radius: .75rem;
+  box-shadow: 0 1rem 3rem rgba(5, 20, 32, .32);
+}
+
+.privacy-choice h2,
+.privacy-choice p {
+  margin: 0;
+  color: inherit;
+}
+
+.privacy-choice h2 {
+  margin-block: .12rem .35rem;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.privacy-choice__eyebrow {
+  color: #ffd36d !important;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.privacy-choice__copy > p:last-child {
+  max-width: 62ch;
+  font-size: .92rem;
+}
+
+.privacy-choice__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9.5rem, 1fr));
+  gap: .55rem;
+  min-width: min(100%, 21rem);
+}
+
+.privacy-choice__button {
+  min-height: 2.75rem;
+  padding: .65rem .8rem;
+  color: #102a3c;
+  background: #f8fbff;
+  border: 2px solid #f8fbff;
+  border-radius: .45rem;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.privacy-choice__button:hover {
+  color: #fff;
+  background: #0e7c9e;
+}
+
+.privacy-choice__button:focus-visible,
+.privacy-choice__details:focus-visible {
+  outline: 3px solid #ffd36d;
+  outline-offset: 3px;
+}
+
+.privacy-choice__details {
+  grid-column: 1 / -1;
+  justify-self: center;
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.privacy-map-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 15rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: #e9f3f7;
+  border: 2px dashed #0e7c9e;
+  border-radius: .65rem;
+}
+
+.privacy-map-placeholder button {
+  margin-top: .8rem;
+  padding: .65rem .9rem;
+  color: #fff;
+  background: #0e7c9e;
+  border: 2px solid #0e7c9e;
+  border-radius: .4rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 48rem) {
+  .privacy-choice {
+    grid-template-columns: 1fr;
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
+  }
+
+  .privacy-choice__actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 28rem) {
+  .privacy-choice__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-choice,
+  .privacy-choice * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

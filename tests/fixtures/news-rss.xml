@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Met Office News Releases</title>
+    <item>
+      <title>Wind and rain expected across parts of the UK</title>
+      <link>https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/example</link>
+      <pubDate>Mon, 13 Jul 2026 10:30:00 GMT</pubDate>
+      <description>A forecast update covering wind and rain.</description>
+      <guid>news-1</guid>
+    </item>
+    <item>
+      <title>Unsafe redirect must be rejected</title>
+      <link>https://example.test/redirect</link>
+      <pubDate>Mon, 13 Jul 2026 09:30:00 GMT</pubDate>
+      <description>This item does not link directly to the Met Office.</description>
+    </item>
+  </channel>
+</rss>

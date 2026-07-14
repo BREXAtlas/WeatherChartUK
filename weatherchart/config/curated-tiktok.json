@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "enabled": false,
+  "mode": "manual-curation-only",
+  "policy": "Publish only a manually reviewed public TikTok URL after oEmbed availability, permission, expiry, location, and family-safety checks.",
+  "approvedVideos": [],
+  "requirements": {
+    "exactAllowedDomain": "www.tiktok.com",
+    "publicUrlRequired": true,
+    "useOfficialOEmbedOnly": true,
+    "maximumAgeHours": 72,
+    "requireFamilySafe": true,
+    "requireHumanReview": true,
+    "requireCoarseLocation": true,
+    "storeDownloadedMedia": false,
+    "defaultEmbedMode": "click-to-load-after-consent"
+  },
+  "removalGuidance": "Remove an item immediately if it becomes private, deleted, unsafe, misleading, or the creator requests removal."
+}

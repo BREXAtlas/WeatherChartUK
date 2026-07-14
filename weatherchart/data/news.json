@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sample": false,
+  "datasetState": "live-rss",
+  "generatedAt": "2026-07-14T04:09:56.949Z",
+  "source": {
+    "name": "Met Office News Releases RSS",
+    "url": "https://www.metoffice.gov.uk/feed/syndication/news-rss.xml",
+    "termsUrl": "https://weather.metoffice.gov.uk/guides/rss",
+    "attribution": "Met Office"
+  },
+  "items": [
+    {
+      "id": "5e9e2719e80387395b08",
+      "title": "Heatwave continues with little rain in the forecast",
+      "publishedAt": "2026-07-13T11:17:24.000Z",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/heatwave-continues-with-little-rain-in-the-forecast",
+      "topic": "heat",
+      "topics": [
+        "heat",
+        "rain"
+      ],
+      "summary": "A new Met Office update is available—read the official source for full details.",
+      "wordCount": 13,
+      "summaryLabel": "WeatherChart’s plain-English take",
+      "reviewStatus": "unreviewed",
+      "reviewedAt": null,
+      "sourceName": "Met Office News Releases RSS"
+    },
+    {
+      "id": "cb6d60f3bf079d1823c4",
+      "title": "More than 2,700 excess deaths estimated in England and Wales during May and June heatwaves",
+      "publishedAt": "2026-07-13T07:44:29.000Z",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/more-than-2700-excess-deaths-estimated-in-england-and-wales-during-may-and-june-heatwaves",
+      "topic": "weather",
+      "topics": [
+        "weather"
+      ],
+      "summary": "A new Met Office update is available—read the official source for full details.",
+      "wordCount": 13,
+      "summaryLabel": "WeatherChart’s plain-English take",
+      "reviewStatus": "unreviewed",
+      "reviewedAt": null,
+      "sourceName": "Met Office News Releases RSS"
+    }
+  ]
+}

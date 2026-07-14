@@ -1,0 +1,23 @@
+{
+  "name": "weatherchart-uk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Live-data generation, validation, and static-site checks for WeatherChart UK.",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec",
+    "test:html": "html-validate weatherchart/*.html",
+    "test:static": "node --test --test-reporter=spec tests/standalone-site.test.mjs",
+    "validate:data": "node scripts/validate-generated-data.mjs",
+    "update:weather": "node scripts/update-weather-data.mjs",
+    "update:news": "node scripts/update-metoffice-news.mjs",
+    "update:community": "node scripts/update-community-pulse.mjs",
+    "update:data": "npm run update:weather && npm run update:news && npm run update:community && node scripts/validate-generated-data.mjs --restore-on-failure"
+  },
+  "devDependencies": {
+    "html-validate": "11.5.6"
+  }
+}

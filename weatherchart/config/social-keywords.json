@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "policy": "Provider searches are broad discovery only. WeatherChart publishes a city or region only when provider metadata or public post text explicitly names it.",
+  "providerQueries": {
+    "youtube": "UK weather rain wind snow storm heatwave forecast",
+    "x": "(#UKWeather OR #WeatherAware OR \"heatwave UK\" OR \"snow UK\" OR \"rain Glasgow\") -is:retweet lang:en"
+  },
+  "providerSources": {
+    "mastodon": [
+      {
+        "instance": "https://mastodon.social",
+        "hashtag": "UKWeather"
+      }
+    ]
+  },
+  "allowedWeatherKeywords": [
+    "weather",
+    "forecast",
+    "rain",
+    "showers",
+    "drizzle",
+    "storm",
+    "thunder",
+    "lightning",
+    "wind",
+    "gust",
+    "snow",
+    "sleet",
+    "ice",
+    "frost",
+    "fog",
+    "mist",
+    "sunshine",
+    "sunny",
+    "cloud",
+    "heatwave",
+    "flood"
+  ],
+  "locations": [
+    {
+      "name": "London",
+      "region": "England",
+      "aliases": ["Greater London"]
+    },
+    {
+      "name": "Birmingham",
+      "region": "West Midlands",
+      "aliases": ["Birmingham UK"]
+    },
+    {
+      "name": "Manchester",
+      "region": "North West England",
+      "aliases": ["Greater Manchester"]
+    },
+    {
+      "name": "Glasgow",
+      "region": "Scotland",
+      "aliases": ["Glasgow area"]
+    },
+    {
+      "name": "Edinburgh",
+      "region": "Scotland",
+      "aliases": ["City of Edinburgh"]
+    },
+    {
+      "name": "Cardiff",
+      "region": "South Wales",
+      "aliases": ["Caerdydd", "Cardiff area"]
+    },
+    {
+      "name": "Belfast",
+      "region": "Northern Ireland",
+      "aliases": ["Belfast area"]
+    },
+    {
+      "name": "Bristol",
+      "region": "South West England",
+      "aliases": ["Bristol area"]
+    },
+    {
+      "name": "Newcastle upon Tyne",
+      "region": "North East England",
+      "aliases": ["Newcastle upon Tyne", "Newcastle UK"]
+    },
+    {
+      "name": "Leeds",
+      "region": "Yorkshire and the Humber",
+      "aliases": ["Leeds UK"]
+    },
+    {
+      "name": "Plymouth",
+      "region": "South West England",
+      "aliases": ["Plymouth UK"]
+    },
+    {
+      "name": "Norwich",
+      "region": "East of England",
+      "aliases": ["Norwich UK"]
+    }
+  ],
+  "perPlatformCaps": {
+    "youtube": 8,
+    "x": 10,
+    "tiktok": 6,
+    "mastodon": 8,
+    "total": 24
+  },
+  "maximumAgeHours": 48,
+  "requestTimeoutMs": 8000
+}

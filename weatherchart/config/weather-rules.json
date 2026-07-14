@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "description": "Deterministic display rules for WeatherChart interpretation cards. These are editorial UI rules, not safety advice.",
+  "evaluationOrder": [
+    "official-warning",
+    "visibility",
+    "wind",
+    "precipitation",
+    "temperature",
+    "default"
+  ],
+  "officialWarning": {
+    "suppressHumourWhenActive": true,
+    "suppressHumourSeverities": [
+      "yellow",
+      "amber",
+      "red"
+    ],
+    "labels": {
+      "yellow": {
+        "rank": 1,
+        "label": "Yellow warning",
+        "action": "Read the official warning and adjust plans where affected."
+      },
+      "amber": {
+        "rank": 2,
+        "label": "Amber warning",
+        "action": "Expect disruption and follow official instructions."
+      },
+      "red": {
+        "rank": 3,
+        "label": "Red warning",
+        "action": "Take action now and follow official emergency guidance."
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "very-poor-visibility",
+      "field": "visibilityKm",
+      "operator": "lessThan",
+      "value": 1,
+      "headline": "Very poor visibility",
+      "advice": "Slow down, use appropriate lights, and check official travel advice.",
+      "tone": "serious",
+      "icon": "visibility"
+    },
+    {
+      "id": "strong-gusts",
+      "field": "gustKph",
+      "operator": "greaterThanOrEqual",
+      "value": 65,
+      "headline": "Strong gusts possible",
+      "advice": "Secure loose items and take care on exposed routes.",
+      "tone": "serious",
+      "icon": "wind"
+    },
+    {
+      "id": "heavy-rain",
+      "field": "rainfallMm",
+      "operator": "greaterThanOrEqual",
+      "value": 4,
+      "headline": "A wet spell",
+      "advice": "Take waterproofs and allow extra time where surface water develops.",
+      "tone": "practical",
+      "icon": "rain"
+    },
+    {
+      "id": "likely-showers",
+      "field": "precipitationProbability",
+      "operator": "greaterThanOrEqual",
+      "value": 60,
+      "headline": "Showers are likely",
+      "advice": "Keep a waterproof layer handy and check the hourly chart.",
+      "tone": "practical",
+      "icon": "showers"
+    },
+    {
+      "id": "hot",
+      "field": "temperatureC",
+      "operator": "greaterThanOrEqual",
+      "value": 28,
+      "headline": "Hot conditions",
+      "advice": "Carry water, seek shade, and check current health guidance.",
+      "tone": "serious",
+      "icon": "temperature-high"
+    },
+    {
+      "id": "cold",
+      "field": "feelsLikeC",
+      "operator": "lessThanOrEqual",
+      "value": 2,
+      "headline": "Feeling cold",
+      "advice": "Add warm layers and watch for local frost or ice information.",
+      "tone": "practical",
+      "icon": "temperature-low"
+    },
+    {
+      "id": "settled",
+      "field": "precipitationProbability",
+      "operator": "lessThan",
+      "value": 20,
+      "headline": "Mostly settled",
+      "advice": "Rain is less likely, but the forecast can still change.",
+      "tone": "light",
+      "icon": "sun-cloud"
+    },
+    {
+      "id": "default",
+      "field": "always",
+      "operator": "equals",
+      "value": true,
+      "headline": "Mixed conditions",
+      "advice": "Use the hourly detail to time your plans.",
+      "tone": "neutral",
+      "icon": "weather"
+    }
+  ],
+  "labels": {
+    "precipitationProbability": "Chance of precipitation at this location and time",
+    "rainfallMm": "Expected precipitation accumulation",
+    "feelsLikeC": "How the air may feel after wind and humidity are considered"
+  },
+  "accessibility": {
+    "colourIsNeverSoleIndicator": true,
+    "announceWarningChanges": true,
+    "tableAlternativeRequiredForCharts": true
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "type": "FeatureCollection",
+  "parameters": [
+    {
+      "screenTemperature": {
+        "type": "Parameter",
+        "description": "Screen air temperature",
+        "unit": { "label": "degrees Celsius", "symbol": { "value": "Cel" } }
+      }
+    },
+    {
+      "windSpeed10m": {
+        "type": "Parameter",
+        "description": "Wind speed at 10 metres",
+        "unit": { "label": "metres per second", "symbol": { "value": "m/s" } }
+      }
+    },
+    {
+      "mslp": {
+        "type": "Parameter",
+        "description": "Mean sea-level pressure",
+        "unit": { "label": "pascals", "symbol": { "value": "Pa" } }
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": ["-0.12", "51.50", "18"] },
+      "properties": {
+        "modelRunDate": "2026-07-13T12:00:00Z",
+        "requestPointDistance": 842,
+        "location": {
+          "name": "London",
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright"
+        },
+        "timeSeries": [
+          {
+            "time": "2026-07-13T16:00:00Z",
+            "screenTemperature": 21.5,
+            "feelsLikeTemperature": 20.8,
+            "probOfPrecipitation": 35,
+            "totalPrecipAmount": 0.2,
+            "screenRelativeHumidity": 67,
+            "windSpeed10m": 5,
+            "windGustSpeed10m": 8,
+            "windDirectionFrom10m": 225,
+            "visibility": 12000,
+            "mslp": 101325,
+            "significantWeatherCode": 10,
+            "uvIndex": 3,
+            "totalCloudAmount": 62
+          },
+          {
+            "time": "2026-07-13T17:00:00Z",
+            "screenTemperature": 20.9,
+            "feelsLikeTemperature": 20.1,
+            "probOfPrecipitation": 45,
+            "totalPrecipAmount": 0.4,
+            "screenRelativeHumidity": 71,
+            "windSpeed10m": 5.5,
+            "windGustSpeed10m": 9,
+            "windDirectionFrom10m": 230,
+            "visibility": 10000,
+            "mslp": 101280,
+            "significantWeatherCode": 12,
+            "uvIndex": 2,
+            "totalCloudAmount": 70
+          }
+        ]
+      }
+    }
+  ]
+}

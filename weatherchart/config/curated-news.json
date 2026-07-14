@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "policy": "Use official feeds or manually reviewed direct links only. Do not scrape article pages, copy article bodies, or reuse images without permission.",
+  "discoveryPages": [
+    {
+      "name": "Met Office news and media",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media",
+      "enabled": true
+    },
+    {
+      "name": "Met Office weather and climate news",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news",
+      "enabled": true
+    }
+  ],
+  "rssFeeds": [
+    {
+      "name": "Met Office News Releases RSS",
+      "url": "https://www.metoffice.gov.uk/feed/syndication/news-rss.xml",
+      "enabled": true
+    }
+  ],
+  "rssStatus": "The hourly pipeline uses the official Met Office News Releases RSS feed for discovery; curatedLinks remains empty until an editor reviews an item.",
+  "editorialRules": {
+    "summaryMinimumWords": 8,
+    "summaryMaximumWords": 25,
+    "requireOriginalSummary": true,
+    "requireDirectOfficialLink": true,
+    "requireSourceName": true,
+    "requireReviewedAt": true,
+    "imageReuseDefault": "prohibited"
+  },
+  "allowedTopics": [
+    "forecasting",
+    "warnings",
+    "climate",
+    "rain",
+    "wind",
+    "temperature",
+    "health",
+    "science"
+  ],
+  "curatedLinks": []
+}

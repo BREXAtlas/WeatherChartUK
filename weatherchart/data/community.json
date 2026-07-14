@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "sample": false,
+  "datasetState": "live-public-posts",
+  "generatedAt": "2026-07-14T04:10:01.246Z",
+  "expiresAfterHours": 48,
+  "notice": "Public posts are shown for local flavour and may be inaccurate. Use the official forecast and warnings for decisions.",
+  "source": {
+    "method": "documented public platform APIs, official provider APIs and manually curated public links",
+    "scrapingUsed": false
+  },
+  "audit": {
+    "version": 1,
+    "containsPostText": false,
+    "requests": 1,
+    "fetched": 32,
+    "accepted": 1,
+    "excluded": {
+      "not-eligible-public-post": 5,
+      "source-host-not-reviewed": 25,
+      "no-coarse-location": 1
+    },
+    "platforms": {
+      "youtube": {
+        "state": "disabled",
+        "requests": 0,
+        "fetched": 0,
+        "accepted": 0,
+        "excluded": {}
+      },
+      "x": {
+        "state": "disabled",
+        "requests": 0,
+        "fetched": 0,
+        "accepted": 0,
+        "excluded": {}
+      },
+      "tiktok": {
+        "state": "disabled",
+        "requests": 0,
+        "fetched": 0,
+        "accepted": 0,
+        "excluded": {}
+      },
+      "mastodon": {
+        "state": "success",
+        "requests": 1,
+        "fetched": 32,
+        "accepted": 1,
+        "excluded": {
+          "not-eligible-public-post": 5,
+          "source-host-not-reviewed": 25,
+          "no-coarse-location": 1
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "mastodon-116911750821598530",
+      "platform": "mastodon",
+      "author": "YouStorm",
+      "authorDisplayName": "YouStorm",
+      "authorHandle": "@youstorm@mastodon.social",
+      "sourceName": "Mastodon",
+      "sourceHost": "mastodon.social",
+      "title": "Weather post by YouStorm",
+      "excerpt": "Two # wildfires yesterday in the UK fanned by brisk easterly winds in continuing dry conditions, one in NW Wales and the other east of Manchester in the Peak District seen by Meteosat-12 with heat signatures on 12 July…",
+      "url": "https://mastodon.social/@youstorm/116911750821598530",
+      "publishedAt": "2026-07-13T08:35:44.726Z",
+      "expiresAt": "2026-07-15T08:35:44.726Z",
+      "keywords": [
+        "heatwave"
+      ],
+      "location": {
+        "label": "Manchester",
+        "region": "North West England",
+        "basis": "author_explicit",
+        "basisLabel": "Location named by author",
+        "confidence": "medium",
+        "latitude": null,
+        "longitude": null
+      },
+      "mediaType": "text-link",
+      "familySafe": true,
+      "reviewStatus": "automated-filtered",
+      "verified": false,
+      "embedAllowed": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+coverage/
+playwright-report/
+test-results/
+.weatherchart-cache/
+.weatherchart-state/
+.weatherchart-quota/
+*.log

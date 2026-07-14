@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "description": "Priority locations used for the WeatherChart UK cached forecast bundle.",
+  "defaultLocationId": "london",
+  "maximumDailyGlobalSpotCalls": 350,
+  "refreshScheduleMinuteUtc": 17,
+  "locations": [
+    {
+      "id": "london",
+      "name": "London",
+      "region": "Greater London",
+      "country": "England",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "timezone": "Europe/London",
+      "aliases": [
+        "central london",
+        "greater london"
+      ],
+      "priority": 1,
+      "forecastEnabled": true
+    },
+    {
+      "id": "birmingham",
+      "name": "Birmingham",
+      "region": "West Midlands",
+      "country": "England",
+      "latitude": 52.4862,
+      "longitude": -1.8904,
+      "timezone": "Europe/London",
+      "aliases": [
+        "brum",
+        "west midlands"
+      ],
+      "priority": 2,
+      "forecastEnabled": true
+    },
+    {
+      "id": "manchester",
+      "name": "Manchester",
+      "region": "North West England",
+      "country": "England",
+      "latitude": 53.4808,
+      "longitude": -2.2426,
+      "timezone": "Europe/London",
+      "aliases": [
+        "greater manchester",
+        "north west"
+      ],
+      "priority": 3,
+      "forecastEnabled": true
+    },
+    {
+      "id": "glasgow",
+      "name": "Glasgow",
+      "region": "West Central Scotland",
+      "country": "Scotland",
+      "latitude": 55.8642,
+      "longitude": -4.2518,
+      "timezone": "Europe/London",
+      "aliases": [
+        "greater glasgow",
+        "west scotland"
+      ],
+      "priority": 4,
+      "forecastEnabled": true
+    },
+    {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "region": "East Central Scotland",
+      "country": "Scotland",
+      "latitude": 55.9533,
+      "longitude": -3.1883,
+      "timezone": "Europe/London",
+      "aliases": [
+        "city of edinburgh",
+        "lothian"
+      ],
+      "priority": 5,
+      "forecastEnabled": true
+    },
+    {
+      "id": "cardiff",
+      "name": "Cardiff",
+      "region": "South Wales",
+      "country": "Wales",
+      "latitude": 51.4816,
+      "longitude": -3.1791,
+      "timezone": "Europe/London",
+      "aliases": [
+        "caerdydd",
+        "south wales"
+      ],
+      "priority": 6,
+      "forecastEnabled": true
+    },
+    {
+      "id": "belfast",
+      "name": "Belfast",
+      "region": "County Antrim",
+      "country": "Northern Ireland",
+      "latitude": 54.5973,
+      "longitude": -5.9301,
+      "timezone": "Europe/London",
+      "aliases": [
+        "béal feirste",
+        "northern ireland"
+      ],
+      "priority": 7,
+      "forecastEnabled": true
+    },
+    {
+      "id": "bristol",
+      "name": "Bristol",
+      "region": "South West England",
+      "country": "England",
+      "latitude": 51.4545,
+      "longitude": -2.5879,
+      "timezone": "Europe/London",
+      "aliases": [
+        "city of bristol",
+        "south west"
+      ],
+      "priority": 8,
+      "forecastEnabled": true
+    },
+    {
+      "id": "newcastle",
+      "name": "Newcastle upon Tyne",
+      "region": "North East England",
+      "country": "England",
+      "latitude": 54.9783,
+      "longitude": -1.6178,
+      "timezone": "Europe/London",
+      "aliases": [
+        "newcastle",
+        "newcastle-on-tyne",
+        "tyne and wear"
+      ],
+      "priority": 9,
+      "forecastEnabled": true
+    },
+    {
+      "id": "leeds",
+      "name": "Leeds",
+      "region": "Yorkshire and the Humber",
+      "country": "England",
+      "latitude": 53.8008,
+      "longitude": -1.5491,
+      "timezone": "Europe/London",
+      "aliases": [
+        "west yorkshire",
+        "yorkshire"
+      ],
+      "priority": 10,
+      "forecastEnabled": true
+    },
+    {
+      "id": "plymouth",
+      "name": "Plymouth",
+      "region": "South West England",
+      "country": "England",
+      "latitude": 50.3755,
+      "longitude": -4.1427,
+      "timezone": "Europe/London",
+      "aliases": [
+        "devon",
+        "south west coast"
+      ],
+      "priority": 11,
+      "forecastEnabled": true
+    },
+    {
+      "id": "norwich",
+      "name": "Norwich",
+      "region": "East of England",
+      "country": "England",
+      "latitude": 52.6309,
+      "longitude": 1.2974,
+      "timezone": "Europe/London",
+      "aliases": [
+        "norfolk",
+        "east anglia"
+      ],
+      "priority": 12,
+      "forecastEnabled": true
+    }
+  ]
+}

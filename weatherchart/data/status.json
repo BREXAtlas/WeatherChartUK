@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-14T04:10:01.246Z",
+  "deployedAt": null,
+  "nextExpectedCheck": "2026-07-14T05:10:01.246Z",
+  "sourcesChecked": [
+    "met-office-global-spot-hourly",
+    "open-meteo-forecast",
+    "community-youtube",
+    "community-x",
+    "community-tiktok",
+    "community-mastodon",
+    "community-aggregation",
+    "met-office-warnings-rss",
+    "met-office-news-rss"
+  ],
+  "successfulSources": [
+    "open-meteo-forecast",
+    "community-youtube",
+    "community-x",
+    "community-tiktok",
+    "community-mastodon",
+    "community-aggregation",
+    "met-office-news-rss",
+    "met-office-warnings-rss"
+  ],
+  "failedSources": [
+    "met-office-global-spot-hourly"
+  ],
+  "sourceErrors": {
+    "met-office-global-spot-hourly": "credential-not-configured"
+  },
+  "provider": {
+    "id": "open-meteo",
+    "name": "Open-Meteo",
+    "mode": "indicative-fallback"
+  },
+  "fallbackUsed": true,
+  "stale": false,
+  "staleLevel": "fresh",
+  "warningCount": 0,
+  "workflowRun": null,
+  "workflowAttempt": null,
+  "lastSuccessfulOfficialAt": null,
+  "lastForecastAttemptAt": null,
+  "forecastState": "live-fallback",
+  "quota": {
+    "utcDay": "2026-07-14",
+    "quotaDayUtc": "2026-07-14",
+    "attempts": 0,
+    "callsUsed": 0,
+    "limit": 350,
+    "limitPerUtcDay": 350,
+    "remaining": 350,
+    "callsRemaining": 350,
+    "callsMadeThisRun": 0,
+    "reservedCallsThisRun": 0,
+    "reservationMode": null,
+    "lastReservationAt": null,
+    "hardStopEnabled": true,
+    "safe": true,
+    "reason": null,
+    "updatedAt": "2026-07-14T04:09:51.963Z",
+    "lastAttemptAt": null
+  },
+  "nextCheckAt": "2026-07-14T05:10:01.246Z",
+  "checkedSources": [
+    "met-office-global-spot-hourly",
+    "open-meteo-forecast",
+    "community-youtube",
+    "community-x",
+    "community-tiktok",
+    "community-mastodon",
+    "community-aggregation",
+    "met-office-warnings-rss",
+    "met-office-news-rss"
+  ],
+  "fallbackActive": true,
+  "workflowRunId": null
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brexatlas.github.io/WeatherChartUK/sitemap.xml

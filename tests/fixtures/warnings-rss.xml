@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Met Office warnings</title>
+    <item>
+      <title>Yellow warning of rain</title>
+      <link>https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings/example</link>
+      <pubDate>Mon, 13 Jul 2026 12:00:00 GMT</pubDate>
+      <cap:effective xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">2026-07-13T13:00:00Z</cap:effective>
+      <cap:expires xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">2026-07-14T06:00:00Z</cap:expires>
+      <cap:areaDesc xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">North West England; Wales</cap:areaDesc>
+      <description><![CDATA[Heavy rain may affect some routes. Read the official warning for affected areas and times.]]></description>
+      <guid>warning-1</guid>
+    </item>
+    <item>
+      <title>Amber warning of extreme heat affecting South West England</title>
+      <link>https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings#?date=2026-06-26&amp;id=warning-2&amp;referrer=rss</link>
+      <pubDate>Fri, 26 Jun 2026 14:56:02 GMT</pubDate>
+      <description>Amber warning of extreme heat affecting South West England: Gloucestershire valid from 2300 Thu 25 Jun to 2259 Fri 26 Jun</description>
+      <guid isPermaLink="false">warning-2</guid>
+    </item>
+  </channel>
+</rss>

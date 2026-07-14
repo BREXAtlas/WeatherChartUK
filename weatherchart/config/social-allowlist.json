@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "policy": "Official YouTube and X API results and public Mastodon hashtag-timeline results may pass strict automated family-safety gates; TikTok and manual links require human review. An allowlist match never replaces content moderation.",
+  "allowedUrlSchemes": [
+    "https"
+  ],
+  "allowedDomains": [
+    {
+      "domain": "www.youtube.com",
+      "platform": "youtube",
+      "purpose": "public video link",
+      "embedPolicy": "privacy-enhanced-click-to-load"
+    },
+    {
+      "domain": "youtu.be",
+      "platform": "youtube",
+      "purpose": "public short video link",
+      "embedPolicy": "privacy-enhanced-click-to-load"
+    },
+    {
+      "domain": "www.youtube-nocookie.com",
+      "platform": "youtube",
+      "purpose": "privacy-enhanced embed",
+      "embedPolicy": "click-to-load"
+    },
+    {
+      "domain": "www.tiktok.com",
+      "platform": "tiktok",
+      "purpose": "manually curated public video",
+      "embedPolicy": "oembed-after-consent"
+    },
+    {
+      "domain": "bsky.app",
+      "platform": "bluesky",
+      "purpose": "public post link",
+      "embedPolicy": "outbound-link-only"
+    },
+    {
+      "domain": "mastodon.social",
+      "platform": "mastodon",
+      "purpose": "public post on reviewed instance",
+      "embedPolicy": "outbound-link-only"
+    },
+    {
+      "domain": "x.com",
+      "platform": "x",
+      "purpose": "public post link when API access permits",
+      "embedPolicy": "outbound-link-only"
+    }
+  ],
+  "allowedMediaTypes": [
+    "text-link",
+    "video-link",
+    "oembed-link"
+  ],
+  "maximumExcerptCharacters": 220,
+  "maximumAgeHours": 72,
+  "requireFamilySafe": true,
+  "requireHumanReview": {
+    "youtube": false,
+    "x": false,
+    "tiktok": true,
+    "manualLinks": true
+  },
+  "requireCoarseLocation": true,
+  "requireManualAccountAllowlist": {
+    "youtube": false,
+    "x": false,
+    "tiktok": false
+  },
+  "manualAllowedAccounts": {
+    "youtube": [],
+    "x": [],
+    "tiktok": []
+  },
+  "blockedQueryParameters": [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "fbclid",
+    "gclid"
+  ]
+}

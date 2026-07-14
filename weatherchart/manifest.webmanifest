@@ -1,0 +1,18 @@
+{
+  "name": "WeatherChart UK",
+  "short_name": "WeatherChart",
+  "description": "An independent, accessible UK weather-information companion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7fbff",
+  "theme_color": "#25245e",
+  "icons": [
+    {
+      "src": "assets/icons/weatherchart-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

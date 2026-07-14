@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-GB" data-page="location" data-consent-site="weatherchart">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self' https://github.com; script-src 'self' https://unpkg.com 'sha256-ztC+JTg0t/rMvzcZXZQvgIgoGBONTpGAXTjoTmt1HT8='; style-src 'self' https://unpkg.com 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://api.postcodes.io https://geocoding-api.open-meteo.com; font-src 'self'; manifest-src 'self'; media-src 'none'; worker-src 'self'">
+  <meta name="theme-color" content="#25245e">
+  <meta name="description" content="Explore an accessible location forecast from WeatherChart UK.">
+  <meta property="og:title" content="Location forecast — WeatherChart UK">
+  <meta property="og:description" content="Current conditions, deterministic day hints, an accessible 24-hour chart and a clearly labelled hourly-derived outlook.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="WeatherChart UK">
+  <meta property="og:url" content="https://brexatlas.github.io/WeatherChartUK/location.html">
+  <meta property="og:image" content="https://brexatlas.github.io/WeatherChartUK/assets/images/weatherchart-social.png">
+  <meta property="og:image:alt" content="WeatherChart UK location forecast preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Location forecast — WeatherChart UK">
+  <meta name="twitter:description" content="Current conditions, deterministic day hints, an accessible 24-hour chart and a clearly labelled hourly-derived outlook.">
+  <meta name="twitter:image" content="https://brexatlas.github.io/WeatherChartUK/assets/images/weatherchart-social.png">
+  <meta name="twitter:image:alt" content="WeatherChart UK location forecast preview">
+  <link rel="canonical" href="https://brexatlas.github.io/WeatherChartUK/location.html" data-canonical>
+  <link rel="icon" href="assets/icons/weatherchart-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/weatherchart.css">
+  <link rel="stylesheet" href="assets/css/animations.css"><link rel="stylesheet" href="assets/css/privacy-choices.css">
+  <title>Location forecast — WeatherChart UK</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the weather</a>
+  <div class="demo-banner" role="region" aria-label="Page status"><span class="demo-banner__badge" data-mode-badge>Checking live data</span><span data-mode-copy>Loading the latest source-labelled forecast and provider status.</span></div>
+  <header class="site-header" data-site-header>
+    <div class="shell site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/icons/weatherchart-mark.svg" width="52" height="52" alt=""><span><strong>WeatherChart</strong><small>UK</small></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">Open menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-site-nav>
+        <a href="index.html" aria-current="page">Forecast</a><a href="news.html">Weather news</a><a href="community.html">Community</a><a href="explainers.html">Explainers</a><a href="sources.html">Sources</a>
+        <a class="button button--small button--ghost" href="https://brexatlas.github.io/Cool-Isle/" data-cool-isle-link>Visit Cool Isle <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">WeatherChart UK</a></li><li aria-current="page">Location forecast</li></ol></nav>
+        <p class="eyebrow">Configured UK forecast points</p>
+        <h1>Put a place on the chart.</h1>
+        <p>Search live configured forecast points while keeping broad postcode matches clearly distinct from doorstep forecasts.</p>
+      </div>
+    </section>
+    <section class="section section--location" aria-labelledby="search-title">
+      <div class="shell">
+        <div class="section-heading"><p class="eyebrow">Find a location</p><h2 id="search-title">Town, city, county or UK postcode</h2></div>
+        <form class="location-search location-search--standalone" role="search" data-location-search novalidate>
+          <label for="location-query">Find a UK place or postcode</label>
+          <div class="location-search__row">
+            <div class="combobox"><input id="location-query" name="location" type="search" autocomplete="off" placeholder="Try Belfast, Bristol or CF10 1EP" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="location-suggestions" aria-describedby="search-help" data-location-input><ul id="location-suggestions" class="suggestions" role="listbox" hidden data-location-suggestions></ul></div>
+            <button class="button button--sun" type="submit">Show weather</button>
+          </div>
+          <p class="field-help" id="search-help" data-search-help>Cached cities are searched first; uncached UK places use Open-Meteo geocoding and postcodes.io, with results held only in this tab.</p>
+          <p class="search-message" role="status" aria-live="polite" data-search-message></p>
+        </form>
+        <button class="button button--ink" type="button" data-use-location style="margin-top:1rem">Use my location</button>
+        <p data-location-privacy-copy>Permission is requested only after this button is chosen. Coordinates are used in the browser to find the nearest forecast location, then discarded.</p>
+      </div>
+    </section>
+    <div class="status-region shell" role="status" aria-live="polite" aria-atomic="true" data-app-status>Loading location data…</div>
+    <section class="section" id="local-weather" aria-labelledby="location-title">
+      <div class="shell">
+        <div class="section-heading section-heading--split"><div><p class="eyebrow" data-selected-location-label>Selected forecast location</p><h2 id="location-title" data-location-heading>Loading location…</h2></div><div class="source-pill" data-location-source>Checking provider…</div></div>
+        <p class="source-context" data-source-context>Forecast data is refreshed server-side and source-labelled; this browser never receives the Met Office key.</p>
+        <div class="conditions-layout">
+          <article class="now-card" data-current-card aria-busy="true"><div class="now-card__condition"><span class="condition-icon" data-condition-icon aria-hidden="true">☁</span><div><p class="temperature"><span data-temperature>—</span><span>°C</span></p><p data-condition>Loading…</p></div></div><p class="feels-like">Feels like <strong data-feels-like>—°C</strong></p><p class="observed-time"><span data-observed-label>Forecast time:</span> <time data-observed-at>—</time></p></article>
+          <dl class="metric-grid" data-metrics>
+            <div><dt>☂ Rain chance</dt><dd data-metric="precipitation">—</dd></div><div><dt>💧 Rainfall</dt><dd data-metric="rainfall">—</dd></div><div><dt>◌ Humidity</dt><dd data-metric="humidity">—</dd></div><div><dt>➜ Wind</dt><dd data-metric="wind">—</dd></div><div><dt>≋ Gusts</dt><dd data-metric="gust">—</dd></div><div><dt>◇ Visibility</dt><dd data-metric="visibility">—</dd></div><div><dt>☁ Cloud cover</dt><dd data-metric="cloud">—</dd></div><div><dt>☀ Sunrise / sunset</dt><dd data-metric="sun">—</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="section section--meaning" aria-labelledby="meaning-title"><div class="shell"><div class="section-heading"><p class="eyebrow">WeatherChart editorial interpretation</p><h2 id="meaning-title">What the numbers might mean</h2><p>Deterministic hints from displayed values, not official advice.</p></div><div class="meaning-grid" data-meaning-grid></div></div></section>
+    <section class="section" aria-labelledby="hourly-title"><div class="shell"><div class="section-heading"><p class="eyebrow">Twenty-four hours</p><h2 id="hourly-title">Chart and accessible table</h2></div><div class="chart-card"><div class="chart-scroll" role="region" tabindex="0" aria-label="Scrollable hourly chart"><svg class="hourly-chart" data-hourly-chart role="img" viewBox="0 0 1040 390"></svg></div><details class="data-table-disclosure" open><summary>Read the hourly data as a table</summary><div class="table-scroll" role="region" tabindex="0" aria-label="Scrollable hourly forecast table"><table><caption data-hourly-caption>Hourly forecast for <span data-table-location>the selected location</span></caption><thead><tr><th scope="col">Time</th><th scope="col">Conditions</th><th scope="col">Temp</th><th scope="col">Feels</th><th scope="col">Rain chance</th><th scope="col">Rainfall</th><th scope="col">Wind</th><th scope="col">Gusts</th></tr></thead><tbody data-hourly-table></tbody></table></div></details></div></div></section>
+    <section class="section section--daily" aria-labelledby="daily-title"><div class="shell"><div class="section-heading"><p class="eyebrow">The longer look</p><h2 id="daily-title">Forecast outlook</h2></div><div class="daily-grid" data-daily-list></div></div></section>
+    <section class="section" aria-labelledby="all-locations-title"><div class="shell"><div class="section-heading"><p class="eyebrow">All configured points</p><h2 id="all-locations-title">Available forecast locations</h2></div><div class="table-scroll" role="region" tabindex="0" aria-label="Scrollable UK forecast location table"><table><caption data-location-table-caption>Available forecast locations and current conditions</caption><thead><tr><th scope="col">Location</th><th scope="col">Region</th><th scope="col">Conditions</th><th scope="col">Temperature</th><th scope="col">Rain chance</th><th scope="col">Wind</th></tr></thead><tbody data-location-table></tbody></table></div></div></section>
+    <section class="source-ribbon" aria-label="Source and safety information"><div class="shell source-ribbon__grid"><p><strong>Source-labelled forecast.</strong>The private provider credential is never sent to this page.</p><p><strong>Independent.</strong>WeatherChart UK is not affiliated with or endorsed by the Met Office.</p><p><strong>Safety first.</strong>Always follow current official Met Office warnings and emergency guidance.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell site-footer__grid"><div><a class="brand brand--footer" href="index.html"><span><strong>WeatherChart</strong><small>UK</small></span></a><p>Clear skies, honest caveats.</p></div><nav aria-label="Footer"><a href="sources.html">Sources &amp; methodology</a><a href="privacy.html">Privacy &amp; corrections</a><a href="community.html">Community approach</a><a href="https://brexatlas.github.io/Cool-Isle/" data-cool-isle-link>Back to Cool Isle</a><a href="cookies.html">Cookies &amp; privacy</a><a href="cookies.html" data-privacy-settings>Privacy choices</a></nav><p class="site-footer__fineprint" data-footer-mode-copy>Weather data remains subject to source times, provider limitations and current official warnings.</p></div></footer>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

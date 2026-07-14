@@ -1,0 +1,163 @@
+name: Refresh and deploy WeatherChart UK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      confirm_quota_bootstrap:
+        description: 'One-time: replace a same-day quarantine with a verified call count'
+        required: false
+        type: boolean
+        default: false
+      bootstrap_date:
+        description: 'Current UTC date (YYYY-MM-DD); required only when bootstrap is confirmed'
+        required: false
+        type: string
+      bootstrap_calls_used:
+        description: 'Verified or conservative calls already used today (0-350)'
+        required: false
+        type: string
+  schedule:
+    - cron: '17 * * * *'
+
+permissions: {}
+
+concurrency:
+  # Never cancel a run after it may have reserved calls. Serial execution also
+  # prevents simultaneous refreshes from competing for the same daily budget.
+  group: weatherchart-pages-and-data
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    permissions:
+      # Required only for the durable quota branch. This job cannot deploy Pages
+      # or mint an OIDC token while it handles the forecast credential.
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the site source
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.0'
+          cache: npm
+
+      - name: Install locked validation dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Restore the last successfully deployed private state
+        uses: actions/cache/restore@v4
+        with:
+          path: .weatherchart-state
+          key: weatherchart-state-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            weatherchart-state-
+
+      - name: Restore the previously deployed public data bundle
+        env:
+          WEATHERCHART_DEPLOYED_DATA_BASE: https://brexatlas.github.io/WeatherChartUK/data/
+        run: node scripts/restore-deployed-data.mjs
+
+      - name: Bootstrap durable quota from an operator-confirmed count
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.confirm_quota_bootstrap == true }}
+        env:
+          WEATHERCHART_BOOTSTRAP_CONFIRMED: 'true'
+          WEATHERCHART_BOOTSTRAP_UTC_DAY: ${{ inputs.bootstrap_date }}
+          WEATHERCHART_BOOTSTRAP_ATTEMPTS: ${{ inputs.bootstrap_calls_used }}
+          WEATHERCHART_QUOTA_TOKEN: ${{ github.token }}
+          WEATHERCHART_QUOTA_BRANCH: weatherchart-quota-state
+          WEATHERCHART_QUOTA_PATH: .weatherchart-quota/met-office-global-spot.json
+        run: node scripts/bootstrap-weather-quota.mjs
+
+      - name: Refresh hourly forecast data
+        env:
+          # This is the only step that receives the repository's Met Office key.
+          MET_OFFICE_API_KEY: ${{ secrets.MET_OFFICE_API_KEY }}
+          WEATHERCHART_REQUIRE_DURABLE_QUOTA: 'true'
+          WEATHERCHART_REQUIRE_LIVE_FORECAST: 'true'
+          WEATHERCHART_QUOTA_TOKEN: ${{ github.token }}
+          WEATHERCHART_QUOTA_BRANCH: weatherchart-quota-state
+          WEATHERCHART_QUOTA_PATH: .weatherchart-quota/met-office-global-spot.json
+        run: node scripts/update-weather-data.mjs
+
+      - name: Refresh official warnings and news
+        run: node scripts/update-metoffice-news.mjs
+
+      - name: Refresh attributed community pulse
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: node scripts/update-community-pulse.mjs
+
+      - name: Validate the complete live-data bundle
+        env:
+          WEATHERCHART_REQUIRE_LIVE_FORECAST: 'true'
+        run: node scripts/validate-generated-data.mjs --restore-on-failure --require-live-forecast
+
+      - name: Run pipeline and standalone-site tests
+        run: npm test
+
+      - name: Validate all site HTML
+        run: npm run test:html
+
+      - name: Recheck and snapshot the verified deployment candidate
+        run: |
+          node scripts/validate-generated-data.mjs --require-live-forecast
+          node scripts/validate-generated-data.mjs --snapshot --require-live-forecast
+
+      - name: Stage the WeatherChart Pages artifact root
+        run: |
+          mkdir -p "$RUNNER_TEMP/pages-site"
+          rsync -a \
+            --exclude='data/sample/' \
+            --exclude='.env' \
+            weatherchart/ "$RUNNER_TEMP/pages-site/"
+          touch "$RUNNER_TEMP/pages-site/.nojekyll"
+
+      - name: Upload the public Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/pages-site
+
+      - name: Transfer the verified private snapshot to the deploy job
+        uses: actions/upload-artifact@v4
+        with:
+          name: weatherchart-private-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .weatherchart-state
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    needs: prepare
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Restore the verified private snapshot
+        uses: actions/download-artifact@v4
+        with:
+          name: weatherchart-private-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .weatherchart-state
+
+      - name: Persist the successfully deployed private snapshot
+        uses: actions/cache/save@v4
+        with:
+          path: .weatherchart-state
+          key: weatherchart-state-${{ github.run_id }}-${{ github.run_attempt }}

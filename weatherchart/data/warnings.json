@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "sample": false,
+  "datasetState": "live-rss",
+  "generatedAt": "2026-07-14T04:09:56.949Z",
+  "source": {
+    "name": "Met Office severe weather warnings RSS",
+    "url": "https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/UK",
+    "termsUrl": "https://weather.metoffice.gov.uk/guides/rss",
+    "attribution": "Met Office"
+  },
+  "omittedIncompleteCount": 0,
+  "warnings": []
+}
