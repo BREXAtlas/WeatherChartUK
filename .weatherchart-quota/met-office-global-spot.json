@@ -1,9 +1,18 @@
 {
   "version": 2,
   "utcDay": "2026-07-14",
-  "attempts": 350,
+  "attempts": 12,
   "limit": 350,
-  "updatedAt": "2026-07-14T05:44:28.639Z",
-  "source": "missing-durable-state-quarantine",
-  "reservations": []
+  "updatedAt": "2026-07-14T05:45:55.878Z",
+  "source": "operator-confirmed-bootstrap",
+  "reservations": [],
+  "bootstrapAudit": {
+    "method": "workflow-dispatch-operator-confirmed",
+    "actor": "BREXAtlas",
+    "workflowRunId": "29309384375",
+    "confirmedAttempts": 12,
+    "confirmedUtcDay": "2026-07-14",
+    "initialisedAt": "2026-07-14T05:45:55.878Z",
+    "replacedQuarantine": true
+  }
 }
