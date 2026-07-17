@@ -119,6 +119,9 @@ jobs:
             weatherchart/ "$RUNNER_TEMP/pages-site/"
           touch "$RUNNER_TEMP/pages-site/.nojekyll"
 
+      - name: Add Cloudflare Web Analytics
+        run: node scripts/inject-cloudflare-analytics.mjs "$RUNNER_TEMP/pages-site"
+
       - name: Upload the public Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
