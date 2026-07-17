@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brexatlas.github.io/WeatherChartUK/sitemap.xml
+Sitemap: https://weatherchart.uk/sitemap.xml
