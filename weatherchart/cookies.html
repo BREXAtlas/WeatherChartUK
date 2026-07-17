@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self' https://github.com; script-src 'self' https://unpkg.com 'sha256-ztC+JTg0t/rMvzcZXZQvgIgoGBONTpGAXTjoTmt1HT8='; style-src 'self' https://unpkg.com 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://api.postcodes.io https://geocoding-api.open-meteo.com; font-src 'self'; manifest-src 'self'; media-src 'none'; worker-src 'self'">
   <meta name="theme-color" content="#25245e">
-  <meta name="description" content="WeatherChart UK cookie, browser-storage and optional map choices.">
+  <meta name="description" content="WeatherChart UK cookie, browser-storage, analytics and optional map choices.">
   <meta property="og:title" content="Cookie and privacy choices — WeatherChart UK">
   <meta property="og:description" content="See what WeatherChart stores and control the optional external interactive map.">
   <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to cookie and privacy information</a>
-  <div class="demo-banner" role="region" aria-label="Privacy status"><span class="demo-banner__badge">Choice first</span><span>No analytics or advertising cookies are used. The external interactive map stays off unless you allow it.</span></div>
+  <div class="demo-banner" role="region" aria-label="Privacy status"><span class="demo-banner__badge">Choice first</span><span>No analytics or advertising cookies are used. Cookie-free Cloudflare Web Analytics runs on page load; the external interactive map stays off unless you allow it.</span></div>
   <header class="site-header">
     <div class="shell site-header__inner">
       <a class="brand" href="index.html"><img class="brand__mark" src="assets/icons/weatherchart-mark.svg" width="52" height="52" alt=""><span><strong>WeatherChart</strong><small>UK</small></span></a>
@@ -37,7 +37,7 @@
     </div>
   </header>
   <main id="main-content">
-    <section class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">WeatherChart UK</a></li><li aria-current="page">Cookie and privacy choices</li></ol></nav><p class="eyebrow">Clear control</p><h1>Cookie and privacy choices.</h1><p>WeatherChart does not use analytics or advertising cookies. One necessary browser-storage record remembers whether you allow the optional external interactive map.</p></div></section>
+    <section class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">WeatherChart UK</a></li><li aria-current="page">Cookie and privacy choices</li></ol></nav><p class="eyebrow">Clear control</p><h1>Cookie and privacy choices.</h1><p>WeatherChart does not use analytics or advertising cookies. It uses cookie-free Cloudflare Web Analytics for aggregate page-view and performance measurement. One necessary browser-storage record remembers whether you allow the optional external interactive map.</p></div></section>
 
     <section class="section" aria-labelledby="choices-title">
       <div class="shell content-layout">
@@ -48,7 +48,7 @@
           <p class="callout" role="status" aria-live="polite" data-privacy-choice-status>Your saved choice, if any, can be changed at any time.</p>
           <p><button class="button button--ink" type="button" data-privacy-settings>Review map privacy choice</button> <button class="button button--ghost" type="button" data-privacy-reset>Clear saved choice and ask again</button></p>
         </div>
-        <aside class="side-card" aria-labelledby="quick-summary-title"><h3 id="quick-summary-title">At a glance</h3><ul><li>No analytics cookies</li><li>No advertising cookies</li><li>No account or saved city</li><li>Optional external map off by default</li><li>Choice remembered for no more than 180 days</li></ul></aside>
+        <aside class="side-card" aria-labelledby="quick-summary-title"><h3 id="quick-summary-title">At a glance</h3><ul><li>Cookie-free Cloudflare analytics beacon</li><li>No analytics cookies</li><li>No advertising cookies</li><li>No account or saved city</li><li>Optional external map off by default</li><li>Choice remembered for no more than 180 days</li></ul></aside>
       </div>
     </section>
 
@@ -56,7 +56,7 @@
       <div class="shell">
         <div class="section-heading"><p class="eyebrow">Browser storage register</p><h2 id="storage-title">The one record WeatherChart stores</h2></div>
         <div class="table-scroll" role="region" tabindex="0" aria-label="Scrollable browser storage register"><table><caption>WeatherChart UK browser storage</caption><thead><tr><th scope="col">Technology and key</th><th scope="col">Purpose</th><th scope="col">Exact contents</th><th scope="col">Duration</th><th scope="col">Category</th></tr></thead><tbody><tr><th scope="row">Local storage: <code>weatherchart.privacy.v1</code></th><td>Remember whether optional external maps are allowed, so the site does not repeatedly ask.</td><td>Policy version, an allow/reject boolean, decision time and expiry time.</td><td>Up to 180 days, or until you clear it.</td><td>Strictly necessary preference storage</td></tr></tbody></table></div>
-        <p>This is local storage, not a cookie. It is used only for the choice you request and is not used to identify you across sites.</p>
+        <p>This is local storage, not a cookie. It is used only for the choice you request and is not used to identify you across sites. Cloudflare Web Analytics does not create an analytics cookie or use browser storage.</p>
       </div>
     </section>
 
@@ -64,10 +64,11 @@
       <div class="shell content-layout">
         <div class="prose">
           <p class="eyebrow">External services</p>
-          <h2 id="connections-title">What allowing the map changes</h2>
+          <h2 id="connections-title">What connects, and when</h2>
+          <p>Cloudflare Web Analytics loads on each page to measure aggregate visits and page performance without analytics cookies or browser storage.</p>
           <p>If you allow the map, the browser downloads Leaflet 1.9.4 from unpkg and requests map tiles from OpenStreetMap. Those providers receive ordinary connection information such as your IP address and browser headers under their own policies. If you reject or later withdraw permission, WeatherChart removes the map and stops further tile requests on that page.</p>
           <p>Other connections happen only when needed for a feature you choose: an uncached place search contacts Open-Meteo geocoding or postcodes.io, and selecting an attributed external link opens that provider. The site also reads its own generated weather JSON from WeatherChart UK.</p>
-          <p><a href="https://www.openstreetmap.org/about/privacy/" rel="external noopener">OpenStreetMap privacy policy</a> · <a href="https://unpkg.com/" rel="external noopener">unpkg service</a></p>
+          <p><a href="https://www.cloudflare.com/privacypolicy/" rel="external noopener">Cloudflare privacy policy</a> · <a href="https://www.openstreetmap.org/about/privacy/" rel="external noopener">OpenStreetMap privacy policy</a> · <a href="https://unpkg.com/" rel="external noopener">unpkg service</a></p>
         </div>
         <aside class="side-card" aria-labelledby="guidance-title"><h3 id="guidance-title">Choice guidance</h3><nav aria-label="Cookie guidance"><a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/how-do-we-manage-consent-in-practice/" rel="external noopener">ICO consent guidance</a><a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/" rel="external noopener">ICO storage exceptions</a><a href="https://commission.europa.eu/cookies-policy_en" rel="external noopener">European Commission cookie example</a><a href="privacy.html">Full privacy and corrections policy</a></nav></aside>
       </div>
@@ -75,9 +76,9 @@
 
     <section class="section section--cool-isle" aria-labelledby="cool-isle-title"><div class="shell cool-isle-panel"><div><p class="eyebrow">From our other side</p><h2 id="cool-isle-title">Weather checked? Get comfortable with Cool Isle.</h2><p>Cool Isle has practical heatwave, cooling and winter-comfort guides. It keeps its own privacy choice because it is a separate site.</p><p><a class="button button--ink" href="https://brexatlas.github.io/Cool-Isle/" data-cool-isle-link>Visit Cool Isle</a></p></div></div></section>
 
-    <section class="source-ribbon" aria-label="Policy information"><div class="shell source-ribbon__grid"><p><strong>Effective date.</strong>14 July 2026.</p><p><strong>Separate sites.</strong>WeatherChart UK and Cool Isle each remember their own choice.</p><p><strong>Questions or corrections.</strong><a href="https://github.com/BREXAtlas/WeatherChartUK/issues/new?title=Cookie%20or%20privacy%20question" rel="external noopener">Open a public repository issue</a> without including sensitive personal information.</p></div></section>
+    <section class="source-ribbon" aria-label="Policy information"><div class="shell source-ribbon__grid"><p><strong>Effective date.</strong>17 July 2026.</p><p><strong>Separate sites.</strong>WeatherChart UK and Cool Isle use separate analytics tokens and remember their own map choices.</p><p><strong>Questions or corrections.</strong><a href="https://github.com/BREXAtlas/WeatherChartUK/issues/new?title=Cookie%20or%20privacy%20question" rel="external noopener">Open a public repository issue</a> without including sensitive personal information.</p></div></section>
   </main>
-  <footer class="site-footer"><div class="shell site-footer__grid"><div><a class="brand brand--footer" href="index.html"><span><strong>WeatherChart</strong><small>UK</small></span></a><p>Clear skies, honest caveats.</p></div><nav aria-label="Footer"><a href="sources.html">Sources &amp; methodology</a><a href="privacy.html">Privacy &amp; corrections</a><a href="community.html">Community approach</a><a href="https://brexatlas.github.io/Cool-Isle/" data-cool-isle-link>Back to Cool Isle</a><a href="cookies.html">Cookies &amp; privacy</a><a href="cookies.html" data-privacy-settings>Privacy choices</a></nav><p class="site-footer__fineprint">Cookie, storage and external map choices for WeatherChart UK.</p></div></footer>
+  <footer class="site-footer"><div class="shell site-footer__grid"><div><a class="brand brand--footer" href="index.html"><span><strong>WeatherChart</strong><small>UK</small></span></a><p>Clear skies, honest caveats.</p></div><nav aria-label="Footer"><a href="sources.html">Sources &amp; methodology</a><a href="privacy.html">Privacy &amp; corrections</a><a href="community.html">Community approach</a><a href="https://brexatlas.github.io/Cool-Isle/" data-cool-isle-link>Back to Cool Isle</a><a href="cookies.html">Cookies &amp; privacy</a><a href="cookies.html" data-privacy-settings>Privacy choices</a></nav><p class="site-footer__fineprint">Cookie, storage, analytics and external map choices for WeatherChart UK.</p></div></footer>
   <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
