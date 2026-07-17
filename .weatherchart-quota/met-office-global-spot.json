@@ -1,9 +1,9 @@
 {
   "version": 2,
   "utcDay": "2026-07-17",
-  "attempts": 120,
+  "attempts": 132,
   "limit": 350,
-  "updatedAt": "2026-07-17T20:54:05.887Z",
+  "updatedAt": "2026-07-17T20:54:46.926Z",
   "source": "github-contents-durable-reservation",
   "reservations": [
     {
@@ -75,6 +75,13 @@
       "attemptsBefore": 108,
       "attemptsAfter": 120,
       "reservedAt": "2026-07-17T20:54:05.887Z"
+    },
+    {
+      "id": "29612880223:1:f27bb739-9c07-446e-be14-3e66fb26c0bc",
+      "size": 12,
+      "attemptsBefore": 120,
+      "attemptsAfter": 132,
+      "reservedAt": "2026-07-17T20:54:46.926Z"
     }
   ]
 }
