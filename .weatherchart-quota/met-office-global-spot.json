@@ -1,101 +1,17 @@
 {
   "version": 2,
-  "utcDay": "2026-07-18",
-  "attempts": 156,
+  "utcDay": "2026-07-19",
+  "attempts": 12,
   "limit": 350,
-  "updatedAt": "2026-07-18T23:13:49.222Z",
+  "updatedAt": "2026-07-19T00:13:10.602Z",
   "source": "github-contents-durable-reservation",
   "reservations": [
     {
-      "id": "29622565967:1:c50635e8-961c-4756-99ec-271ab4ad6c52",
+      "id": "29666581703:1:25b93eab-f2ce-4d40-9204-0e5841333f3a",
       "size": 12,
       "attemptsBefore": 0,
       "attemptsAfter": 12,
-      "reservedAt": "2026-07-18T00:12:36.198Z"
-    },
-    {
-      "id": "29629144835:1:78b226cb-4b42-4d60-99e6-9aa86f54a645",
-      "size": 12,
-      "attemptsBefore": 12,
-      "attemptsAfter": 24,
-      "reservedAt": "2026-07-18T03:37:40.133Z"
-    },
-    {
-      "id": "29633872912:1:e8c3cc03-c8a2-490e-a2a9-8707d6a1a916",
-      "size": 12,
-      "attemptsBefore": 24,
-      "attemptsAfter": 36,
-      "reservedAt": "2026-07-18T06:22:29.627Z"
-    },
-    {
-      "id": "29638448405:1:9766d5ff-2409-45c1-b131-8b5947ba050a",
-      "size": 12,
-      "attemptsBefore": 36,
-      "attemptsAfter": 48,
-      "reservedAt": "2026-07-18T09:01:27.733Z"
-    },
-    {
-      "id": "29641301136:1:0523282b-64b9-46e1-af75-22c8aa738717",
-      "size": 12,
-      "attemptsBefore": 48,
-      "attemptsAfter": 60,
-      "reservedAt": "2026-07-18T10:43:02.843Z"
-    },
-    {
-      "id": "29643756963:1:b970cc53-eae6-404a-a6c8-fa1b3377bb73",
-      "size": 12,
-      "attemptsBefore": 60,
-      "attemptsAfter": 72,
-      "reservedAt": "2026-07-18T12:07:38.959Z"
-    },
-    {
-      "id": "29646968502:1:45810e3e-812d-4e8e-bdd0-66384bdf0857",
-      "size": 12,
-      "attemptsBefore": 72,
-      "attemptsAfter": 84,
-      "reservedAt": "2026-07-18T13:53:05.499Z"
-    },
-    {
-      "id": "29649687859:1:dd6b8551-9b50-4ae4-9f5f-72d96fd25335",
-      "size": 12,
-      "attemptsBefore": 84,
-      "attemptsAfter": 96,
-      "reservedAt": "2026-07-18T15:17:41.050Z"
-    },
-    {
-      "id": "29653627295:1:d3afa09f-5287-491e-9b49-cb666f575291",
-      "size": 12,
-      "attemptsBefore": 96,
-      "attemptsAfter": 108,
-      "reservedAt": "2026-07-18T17:17:49.448Z"
-    },
-    {
-      "id": "29658070650:1:38f41db9-271d-4a40-9dd4-ad83561d97f1",
-      "size": 12,
-      "attemptsBefore": 108,
-      "attemptsAfter": 120,
-      "reservedAt": "2026-07-18T19:35:32.011Z"
-    },
-    {
-      "id": "29661035869:1:fbc3cacd-b645-4f0a-bc42-3b179033e9e3",
-      "size": 12,
-      "attemptsBefore": 120,
-      "attemptsAfter": 132,
-      "reservedAt": "2026-07-18T21:08:15.569Z"
-    },
-    {
-      "id": "29662932193:1:91e184ca-bcc1-44bc-bba6-35568308dc30",
-      "size": 12,
-      "attemptsBefore": 132,
-      "attemptsAfter": 144,
-      "reservedAt": "2026-07-18T22:09:52.076Z"
-    },
-    {
-      "id": "29664850409:1:9d2fd2a9-a221-40ad-870d-7e3f50123086",
-      "size": 12,
-      "attemptsBefore": 144,
-      "attemptsAfter": 156,
-      "reservedAt": "2026-07-18T23:13:49.222Z"
+      "reservedAt": "2026-07-19T00:13:10.602Z"
     }
   ]
 }
