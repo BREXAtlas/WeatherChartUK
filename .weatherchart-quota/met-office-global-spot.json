@@ -1,94 +1,17 @@
 {
   "version": 2,
-  "utcDay": "2026-07-19",
-  "attempts": 144,
+  "utcDay": "2026-07-20",
+  "attempts": 12,
   "limit": 350,
-  "updatedAt": "2026-07-19T23:14:36.515Z",
+  "updatedAt": "2026-07-20T04:11:33.104Z",
   "source": "github-contents-durable-reservation",
   "reservations": [
     {
-      "id": "29666581703:1:25b93eab-f2ce-4d40-9204-0e5841333f3a",
+      "id": "29716267135:1:1b0bdaba-4386-4150-8c8c-0658923b6f77",
       "size": 12,
       "attemptsBefore": 0,
       "attemptsAfter": 12,
-      "reservedAt": "2026-07-19T00:13:10.602Z"
-    },
-    {
-      "id": "29672618548:1:f59aa960-651a-4de7-9df3-def73c55ec6c",
-      "size": 12,
-      "attemptsBefore": 12,
-      "attemptsAfter": 24,
-      "reservedAt": "2026-07-19T04:00:09.635Z"
-    },
-    {
-      "id": "29676932032:1:8410faf3-fc99-48f3-835e-7b4c9e680393",
-      "size": 12,
-      "attemptsBefore": 24,
-      "attemptsAfter": 36,
-      "reservedAt": "2026-07-19T06:44:45.834Z"
-    },
-    {
-      "id": "29681380638:1:b98b62f3-022c-4338-a1fd-64bdb3fc2247",
-      "size": 12,
-      "attemptsBefore": 36,
-      "attemptsAfter": 48,
-      "reservedAt": "2026-07-19T09:20:07.838Z"
-    },
-    {
-      "id": "29685337694:1:2239f031-5469-4b33-a941-952c2cf55c56",
-      "size": 12,
-      "attemptsBefore": 48,
-      "attemptsAfter": 60,
-      "reservedAt": "2026-07-19T11:33:22.169Z"
-    },
-    {
-      "id": "29689849567:1:6c887d65-0aa4-4de7-b2dd-6c43a3f1bd35",
-      "size": 12,
-      "attemptsBefore": 60,
-      "attemptsAfter": 72,
-      "reservedAt": "2026-07-19T13:56:50.943Z"
-    },
-    {
-      "id": "29692550452:1:085ebeda-6935-417b-8b88-25298135fe0d",
-      "size": 12,
-      "attemptsBefore": 72,
-      "attemptsAfter": 84,
-      "reservedAt": "2026-07-19T15:17:52.947Z"
-    },
-    {
-      "id": "29696838691:1:34bade6b-a63b-4f30-8534-d898ee1f8b65",
-      "size": 12,
-      "attemptsBefore": 84,
-      "attemptsAfter": 96,
-      "reservedAt": "2026-07-19T17:26:53.351Z"
-    },
-    {
-      "id": "29700922541:1:68ed6aa9-ee9a-4679-85cd-410a6243fda2",
-      "size": 12,
-      "attemptsBefore": 96,
-      "attemptsAfter": 108,
-      "reservedAt": "2026-07-19T19:36:04.484Z"
-    },
-    {
-      "id": "29703864125:1:970d5f25-1c27-4b29-8625-1ac65fd3e8f3",
-      "size": 12,
-      "attemptsBefore": 108,
-      "attemptsAfter": 120,
-      "reservedAt": "2026-07-19T21:10:12.874Z"
-    },
-    {
-      "id": "29705702737:1:433d7d6e-1d1a-43ef-835a-b9c211a9e390",
-      "size": 12,
-      "attemptsBefore": 120,
-      "attemptsAfter": 132,
-      "reservedAt": "2026-07-19T22:11:35.644Z"
-    },
-    {
-      "id": "29707590873:1:26c88ba2-fb28-4cb5-a1e3-248163a7d3ea",
-      "size": 12,
-      "attemptsBefore": 132,
-      "attemptsAfter": 144,
-      "reservedAt": "2026-07-19T23:14:36.515Z"
+      "reservedAt": "2026-07-20T04:11:33.104Z"
     }
   ]
 }
