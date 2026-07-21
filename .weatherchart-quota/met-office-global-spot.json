@@ -1,73 +1,17 @@
 {
   "version": 2,
-  "utcDay": "2026-07-20",
-  "attempts": 108,
+  "utcDay": "2026-07-21",
+  "attempts": 12,
   "limit": 350,
-  "updatedAt": "2026-07-20T23:27:29.738Z",
+  "updatedAt": "2026-07-21T03:50:27.912Z",
   "source": "github-contents-durable-reservation",
   "reservations": [
     {
-      "id": "29716267135:1:1b0bdaba-4386-4150-8c8c-0658923b6f77",
+      "id": "29799578601:1:b8addc18-a97e-4e0d-a965-2016facac666",
       "size": 12,
       "attemptsBefore": 0,
       "attemptsAfter": 12,
-      "reservedAt": "2026-07-20T04:11:33.104Z"
-    },
-    {
-      "id": "29724982657:1:c4e726a8-2891-4833-bf74-147f28a01421",
-      "size": 12,
-      "attemptsBefore": 12,
-      "attemptsAfter": 24,
-      "reservedAt": "2026-07-20T07:33:37.408Z"
-    },
-    {
-      "id": "29737952669:1:94efe11d-5561-436b-b12d-3de581753f6c",
-      "size": 12,
-      "attemptsBefore": 24,
-      "attemptsAfter": 36,
-      "reservedAt": "2026-07-20T11:16:17.559Z"
-    },
-    {
-      "id": "29745878763:1:6ef8e8f5-6f90-4d97-9b51-3d3a9e5be85f",
-      "size": 12,
-      "attemptsBefore": 36,
-      "attemptsAfter": 48,
-      "reservedAt": "2026-07-20T13:21:13.080Z"
-    },
-    {
-      "id": "29757911877:1:abecbff5-f209-4cbc-a637-a903ee3d8894",
-      "size": 12,
-      "attemptsBefore": 48,
-      "attemptsAfter": 60,
-      "reservedAt": "2026-07-20T16:03:35.337Z"
-    },
-    {
-      "id": "29767500368:1:e15295b8-5690-4742-8946-62f3b0f7d439",
-      "size": 12,
-      "attemptsBefore": 60,
-      "attemptsAfter": 72,
-      "reservedAt": "2026-07-20T18:23:02.011Z"
-    },
-    {
-      "id": "29777302117:1:c18aafee-1b44-4628-b11a-c253605fb787",
-      "size": 12,
-      "attemptsBefore": 72,
-      "attemptsAfter": 84,
-      "reservedAt": "2026-07-20T20:43:42.402Z"
-    },
-    {
-      "id": "29783257097:1:a5cec3cb-594d-4fc5-a283-9f38984663b4",
-      "size": 12,
-      "attemptsBefore": 84,
-      "attemptsAfter": 96,
-      "reservedAt": "2026-07-20T22:15:19.384Z"
-    },
-    {
-      "id": "29787251796:1:b82ae40c-ca77-4313-a3c3-e984e2eb9df0",
-      "size": 12,
-      "attemptsBefore": 96,
-      "attemptsAfter": 108,
-      "reservedAt": "2026-07-20T23:27:29.738Z"
+      "reservedAt": "2026-07-21T03:50:27.912Z"
     }
   ]
 }
