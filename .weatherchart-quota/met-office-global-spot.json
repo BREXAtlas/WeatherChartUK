@@ -1,80 +1,17 @@
 {
   "version": 2,
-  "utcDay": "2026-07-22",
-  "attempts": 120,
+  "utcDay": "2026-07-23",
+  "attempts": 12,
   "limit": 350,
-  "updatedAt": "2026-07-22T22:18:22.340Z",
+  "updatedAt": "2026-07-23T00:15:19.152Z",
   "source": "github-contents-durable-reservation",
   "reservations": [
     {
-      "id": "29879515375:1:6ef51117-2137-4ce0-92bd-630035b81510",
+      "id": "29968550284:1:4d63293a-982c-4974-a919-422a1db88c53",
       "size": 12,
       "attemptsBefore": 0,
       "attemptsAfter": 12,
-      "reservedAt": "2026-07-22T00:11:57.844Z"
-    },
-    {
-      "id": "29889494271:1:ed29e7f0-9eec-40a8-bae3-47240b73b9c1",
-      "size": 12,
-      "attemptsBefore": 12,
-      "attemptsAfter": 24,
-      "reservedAt": "2026-07-22T03:51:05.068Z"
-    },
-    {
-      "id": "29897732370:1:025ba271-34e3-45f5-9131-8ffe32fc2b55",
-      "size": 12,
-      "attemptsBefore": 24,
-      "attemptsAfter": 36,
-      "reservedAt": "2026-07-22T06:44:38.833Z"
-    },
-    {
-      "id": "29908953851:1:71dde580-a418-4b2a-a14d-aa77b48050b9",
-      "size": 12,
-      "attemptsBefore": 36,
-      "attemptsAfter": 48,
-      "reservedAt": "2026-07-22T09:41:34.698Z"
-    },
-    {
-      "id": "29918304295:1:0cda5bdf-4a85-4824-9992-68a398cf7ce1",
-      "size": 12,
-      "attemptsBefore": 48,
-      "attemptsAfter": 60,
-      "reservedAt": "2026-07-22T12:06:47.355Z"
-    },
-    {
-      "id": "29928698172:1:70f3c039-e520-4f36-ba39-3aa0d9d7d79d",
-      "size": 12,
-      "attemptsBefore": 60,
-      "attemptsAfter": 72,
-      "reservedAt": "2026-07-22T14:28:03.352Z"
-    },
-    {
-      "id": "29939819939:1:6f952091-2dd0-40c2-9763-95deb41fc931",
-      "size": 12,
-      "attemptsBefore": 72,
-      "attemptsAfter": 84,
-      "reservedAt": "2026-07-22T16:51:27.914Z"
-    },
-    {
-      "id": "29947378615:1:8313e1de-1345-4eb5-9607-1b6745bdb2a3",
-      "size": 12,
-      "attemptsBefore": 84,
-      "attemptsAfter": 96,
-      "reservedAt": "2026-07-22T18:36:20.834Z"
-    },
-    {
-      "id": "29955631822:1:b1319428-37ae-4436-bd6c-c8be3ae6c340",
-      "size": 12,
-      "attemptsBefore": 96,
-      "attemptsAfter": 108,
-      "reservedAt": "2026-07-22T20:38:51.449Z"
-    },
-    {
-      "id": "29962373486:1:d61d378f-c8ad-4abc-a127-fa57fbe921b6",
-      "size": 12,
-      "attemptsBefore": 108,
-      "attemptsAfter": 120,
-      "reservedAt": "2026-07-22T22:18:22.340Z"
+      "reservedAt": "2026-07-23T00:15:19.152Z"
     }
   ]
 }
